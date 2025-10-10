@@ -4,4 +4,4 @@ from django.http import HttpResponse
 
 
 def home_view(request):
-    return HttpResponse("Hello, welcome to the Food Online service!")
+    return render( request, 'home.html' )
