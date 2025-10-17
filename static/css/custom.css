@@ -5,6 +5,13 @@
     100% {bottom: -100%}
 }
 
+.user-nav-list ul li.active a {
+    color: #fff;
+    background-color: #e63946; /* red highlight */
+    border-left: 4px solid #b22222;
+}
+
+
 .show-notification{
     position: fixed;
     bottom: 100%;
