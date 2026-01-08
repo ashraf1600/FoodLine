@@ -1,0 +1,26 @@
+{% autoescape off %}
+
+Hi,
+
+You have received a new order!
+
+Order Number: {{ order.order_number }}
+Date: {{ order.created_at }}
+Customer: {{ order.first_name }} {{ order.last_name }}
+
+Items for you:
+{% for item in ordered_food_to_vendor %}
+- {{ item.fooditem.food_title }} x {{ item.quantity }} : BDT {{ item.amount }}
+{% endfor %}
+
+Subtotal: BDT {{ vendor_subtotal }}
+Tax: BDT {{ tax_data }}
+Grand Total: BDT {{ vendor_grand_total }}
+
+Please check your dashboard for more details.
+
+Thanks,
+FoodOnline Team
+http://{{ domain }}
+
+{% endautoescape %}

@@ -94,12 +94,8 @@ WSGI_APPLICATION = 'foodOnline_main.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': config('DB_NAME'),
-        'USER': config('DB_USER'),
-        'PASSWORD': config('DB_PASSWORD'),
-        'HOST': config('DB_HOST'),  # or IP address if remote
-        'PORT': '5432',        # default PostgreSQL port
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
@@ -186,6 +182,15 @@ SECURE_CROSS_ORIGIN_OPENER_POLICY = 'same-origin-allow-popups'
 
 RZP_KEY_ID = config('RZP_KEY_ID', default='dummy-razorpay-key-id')
 RZP_KEY_SECRET = config('RZP_KEY_SECRET', default='dummy-razorpay-key-secret')
+
+
+
+# settings.py
+
+SSLCOMMERZ_STORE_ID = "multi6945960959830"
+SSLCOMMERZ_STORE_PASS = "multi6945960959830@ssl"
+SSLCOMMERZ_IS_LIVE = False  # Sandbox
+
 
 
 

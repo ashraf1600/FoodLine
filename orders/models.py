@@ -11,6 +11,7 @@ class Payment(models.Model):
     PAYMENT_METHOD = (
         ('PayPal', 'PayPal'),
         ('Bkash', 'Bkash'),
+        ('SSLCommerz', 'SSLCommerz'),
     )
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     transaction_id = models.CharField(max_length=100)

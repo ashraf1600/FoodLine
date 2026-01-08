@@ -4,7 +4,7 @@ from accounts.forms import UserInfoForm, UserProfileForm
 from accounts.models import UserProfile
 from django.contrib import messages
 from orders.models import Order, OrderedFood
-import simplejson as json
+import json
 
 
 @login_required(login_url='login')

@@ -7,6 +7,7 @@ from django.db.models import Prefetch
 from .models import Cart
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
+from decimal import Decimal
 
 # Commented out unused GIS imports that cause GDAL dependency issues
 # from django.contrib.gis.geos import GEOSGeometry

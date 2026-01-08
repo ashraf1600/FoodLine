@@ -1,0 +1,27 @@
+{% autoescape off %}
+
+Hi {{ user.first_name }},
+
+Thank you for your order! Your order has been placed successfully.
+
+Order Number: {{ order.order_number }}
+Transaction ID: {{ order.payment.transaction_id }}
+Payment Method: {{ order.payment.payment_method }}
+Date: {{ order.created_at }}
+
+Items Ordered:
+{% for item in ordered_food %}
+- {{ item.fooditem.food_title }} x {{ item.quantity }} : BDT {{ item.amount }}
+{% endfor %}
+
+Subtotal: BDT {{ customer_subtotal }}
+Tax: BDT {{ order.total_tax }}
+Grand Total: BDT {{ order.total }}
+
+We will notify you once your order is on the way!
+
+Thanks,
+FoodOnline Team
+http://{{ domain }}
+
+{% endautoescape %}
