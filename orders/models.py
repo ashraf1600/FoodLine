@@ -63,8 +63,7 @@ class Order(models.Model):
     def order_placed_to(self):
         return ", ".join([str(i) for i in self.vendors.all()])
 
-    def get_total_by_vendor(self):
-        vendor = Vendor.objects.get(user=request_object.user)
+    def get_total_by_vendor(self, vendor):
         subtotal = 0
         tax = 0
         tax_dict = {}
